@@ -8,19 +8,16 @@ $( function(){
 
     $("input[name=ce]").click( function(){
         $("#result").val('');
-        $("#op").val('');
-    });
-
-    $("input[name=ce]").click( function(){
-        $("#result").val('');
+        $("#op").text('');
     });
 
     $("input[name=soma]").click( function(){
         if($("#result").val() != ''){
             v1 = parseFloat($("#result").val());
-            $("result").val('');
+            $("#result").val(' ');
             op="soma";
             $("#op").text($(this).val());
+
         }else{
             alert('Insira um valor para efetuar a operação!');
         }
@@ -29,7 +26,7 @@ $( function(){
     $("input[name=menos]").click( function(){
         if($("#result").val() != ''){
             v1 = parseFloat($("#result").val());
-            $("result").val('');
+            $("#result").val('');
             op="menos";
             $("#op").text($(this).val());
         }else{
@@ -40,7 +37,7 @@ $( function(){
     $("input[name=mult]").click( function(){
         if($("#result").val() != ''){
             v1 = parseFloat($("#result").val());
-            $("result").val('');
+            $("#result").val('');
             op="mult";
             $("#op").text($(this).val());
         }else{
@@ -51,7 +48,7 @@ $( function(){
     $("input[name=div]").click( function(){
         if($("#result").val() != ''){
             v1 = parseFloat($("#result").val());
-            $("result").val('');
+            $("#result").val('');
             op="div";
             $("#op").text($(this).val());
         }else{
@@ -68,11 +65,11 @@ $( function(){
             }
 
             else if(op == "menos"){
-                $("#result").val(v1-v2);
+                $("#result").val(v1 -vv2);
             }
            
-            else if(op == "vezes"){
-                $("#result").val(v1*v2);
+            else if(op == "mult"){
+                $("#result").val(v1 * v2);
             }
 
             else{
